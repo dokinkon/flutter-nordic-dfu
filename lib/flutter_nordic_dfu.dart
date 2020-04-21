@@ -136,6 +136,7 @@ class FlutterNordicDfu {
         default:
           break;
       }
+      return Future.value(null);
     });
 
     return await _channel.invokeMethod('startDfu', <String, dynamic>{
