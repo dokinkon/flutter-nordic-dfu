@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_nordic_dfu/flutter_nordic_dfu.dart';
 import 'package:flutter_blue/flutter_blue.dart';
+import 'package:flutter_nordic_dfu/flutter_nordic_dfu.dart';
 
 void main() => runApp(MyApp());
 
@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
     try {
       var s = await FlutterNordicDfu.startDfu(
         deviceId,
-        'assets/file.zip',
+        'assets/ble_button_dfu_21_tunai_std.zip',
         fileInAsset: true,
         progressListener:
             DefaultDfuProgressListenerAdapter(onProgressChangedHandle: (
